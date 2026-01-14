@@ -12,14 +12,15 @@ app = FastAPI(title="Todo API")
 app.add_middleware(
     CORSMiddleware,
     allow_origins=[
-    "https://final-repo-phase-3-git-main-ucdexperts-projects.vercel.app",
-    "https://localhost:3000",
-    "http://localhost:3001",
+        "https://final-repo-phase-3.vercel.app",
+        "http://localhost:3000",
+        "http://localhost:3001",
     ],
     allow_credentials=True,
     allow_methods=["*"],
     allow_headers=["*"],
 )
+
 
 # Startup event to create tables
 @app.on_event("startup")
