@@ -1,4 +1,5 @@
 'use client';
+import { API_URL } from '@/lib/api';
 
 // Authentication helper functions
 export function isAuthenticated(): boolean {
@@ -24,7 +25,7 @@ export function getUser() {
 }
 
 export async function signIn(email: string, password: string) {
-  const response = await fetch('http://localhost:8000/api/auth/login', {
+  const response = await fetch(`${API_URL}/api/auth/login`, {
     method: 'POST',
     headers: { 
       'Content-Type': 'application/json' 
@@ -61,7 +62,7 @@ export async function signIn(email: string, password: string) {
 }
 
 export async function signUp(name: string, email: string, password: string) {
-  const response = await fetch('http://localhost:8000/api/auth/register', {
+  const response = await fetch(`${API_URL}/api/auth/register`, {
     method: 'POST',
     headers: { 
       'Content-Type': 'application/json' 
