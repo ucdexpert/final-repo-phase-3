@@ -12,7 +12,7 @@ app = FastAPI(title="Todo API")
 app.add_middleware(
     CORSMiddleware,
     allow_origins=[
-    "https://todo-app-one-gamma-91.vercel.app",
+    "https://final-repo-phase-3-git-main-ucdexperts-projects.vercel.app",
     "https://localhost:3000",
     "http://localhost:3001",
     ],
